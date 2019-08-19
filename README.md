@@ -1,4 +1,23 @@
 
+
+# Komplexe Stylesheets strukturieren - das 5-1 Muster
+5 Ordner, 1 Datei. Grundsätzlich hast du all deine partials in 5 verschiedenen Ordnern verteilt, und eine Datei auf dem Root-Level (normalerweise main.scss) importiert und kompiliert alles zu einem Stylesheet.
+
+```
+helpers/
+base/
+components/
+layout/
+vendors/
+```
+
+Und natürlich:
+
+```
+main.scss
+```
+
+
 ## Vendors Ordner
 Und zu guter Letzt, der vendors/ Ordner. Die meisten Projekte besitzen einen solchen oder ähnlichen Ordner indem alles CSS von externen Libraries und Frameworks wie z.B. Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered und so weiter, gelistet sind. All diese in einem Ordner zu sammeln ist ein guter Weg zu sagen “Hey, das ist nicht von mir, nicht mein Code, nicht meine Verantwortung”.
 
@@ -57,6 +76,28 @@ _placeholders.scss
 
 Bei einem sehr großen Projekt mit vielen abstrakten Utilities mag es interessant sein diese eher nach Typ oder Thema, wie zum Beispiel Typographie (_typography.scss), Theming (_theming.scss) etc., zu gruppieren. Jede Datei enthält alle zugehörigen Helper: Variablen, Funktionen, Mixins und Platzhalter. Das macht deinen Code einfacher zum durchsuchen und warten, besonders wenn die Dateien sehr groß werden.
 
+## Main Datei
+Die Main Datei (üblicherweise main.scss genannt) sollte die einzige Sass-Datei aus der Codebasis sein, welche nicht mit einem Unterstrich beginnt. Außer @import und Kommentaren steht dort nichts weiter drin.
+
+Die Dateien sollten danach importiert werden, in welchem Ordner sie sich befinden. Eins nach dem anderen, nach folgender Reihenfolge:
+
+```
+abstracts/
+vendors/
+base/
+layout/
+components/
+pages/
+themes/
+```
+
+Um die Lesbarkeit einzuhalten, solltest du außerdem diese Richtlinien beachten:
+
+eine Datei pro @import;
+ein @import pro Zeile;
+keine neue Zeile zwischen imports vom selben Ordner;
+eine neue Zeile nach dem letzten import aus einem Ordner;
+Dateiendungen und Unterstriche am Anfang weglassen.
 
 
 ```
