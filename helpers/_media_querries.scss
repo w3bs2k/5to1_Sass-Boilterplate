@@ -1,0 +1,11 @@
+@mixin for-size($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $value: map-get($breakpoints, $breakpoint);
+         
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    }
+     
+    @warn "Unknown `#{$breakpoint}` in $breakpoints";
+}
