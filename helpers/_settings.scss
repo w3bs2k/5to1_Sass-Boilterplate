@@ -1,0 +1,39 @@
+//Font 
+$base-font-family: 'droid_serifregular', 'Arial', 'Helvetica', sans-serif !default;
+$fallback-font-family: "Helvetica Neue", sans-serif !default;
+$base-font-size: 16px !default;
+$base-line-height: 1.5 !default;
+$base-font-weight: 300 !default;
+$base-font-style: normal !default;
+$base-font-variant: normal !default;
+$base-font-stack: (
+	font-style: $base-font-style,
+	font-variant: $base-font-variant,
+	font-weight: $base-font-weight,
+	font-size: $base-font-size,
+	line-height: $base-line-height,
+	font-family: $base-font-family
+);
+//Color
+$brand-color-primary: #4e7d1b !default;
+$brand-color-secondary: #5a911f !default;
+$brand-color-grey: #797878;
+$text-color: #666666 !default;
+$text-color-dark: #333333;
+$grau: #eee !default;
+$weiss: #fff !default;
+
+//Breakpoints
+$size-xs: 375px !default;
+$size-sm: 640px !default;
+$size-md: 840px !default;
+$size-lg: 960px !default;
+$size-xl: 1280px !default;
+$size-2x: 1440px !default;
+$breakpoints: (
+    xl: $size-xl,
+    lg: $size-lg,
+    md: $size-md,
+	sm: $size-sm,
+	xs: $size-xs
+);
