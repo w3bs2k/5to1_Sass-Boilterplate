@@ -1,0 +1,8 @@
+body {
+	font: 	map-get($base-font-stack, font-style)
+			map-get($base-font-stack, font-variant)
+			map-get($base-font-stack, font-weight)
+			map-get($base-font-stack, font-size) unquote("/")
+			map-get($base-font-stack, line-height)
+			map-get($base-font-stack, font-family);
+}
